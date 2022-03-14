@@ -1,0 +1,600 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;600&display=swap');
+:root {
+    /*Colors*/
+    --white: #ffffff;
+    --gray-dark: #3e5985;
+    --gray-light: #758399;
+    --blue-dark: #304fc9;
+    --blue-dark-title: #1f3e72;
+    --blue-dark-button: #3858d6;
+    --blue-dark-icons: #3353d1;
+    --blue-light-box-icon: #ebf2fe;
+    --blue-light-button: #f1f5ff;
+    --blue-light-footer: #eef3ff;
+    --blue-gradient: linear-gradient(90deg, rgba(18, 141, 227, 1) 0%, rgba(16, 143, 228, 1) 35%, rgba(44, 108, 220, 1) 100%);
+    --yellow-dark: #ffdc51;
+    --yellow-light: #fff7d7;
+    --purple-light: #eef3ff;
+    /*Fonts*/
+    --title: 'Poppins', sans-serif;
+    --paragraph: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--white);
+}
+
+.brand-title {
+    margin-top: 5px;
+    color: var(--blue-dark);
+    font-family: var(--title);
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+}
+
+
+/*Header*/
+
+header::before {
+    content: '';
+    display: block;
+    margin-bottom: 80px;
+}
+
+nav {
+    width: 100%;
+    height: 80px;
+    background-color: var(--white);
+    border-bottom: 1px solid transparent;
+    box-shadow: 1px 1px 10px 0 rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    /*transition: ease-in-out 0.5s;*/
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    width: 100%;
+}
+
+.nav .logo {
+    height: 80px;
+    background-color: var(--white);
+    padding: 20px 50px;
+}
+
+.nav .logo img {
+    height: 10%;
+    vertical-align: top;
+}
+
+.nav .links-header ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 40px 20px;
+}
+
+.nav .links-header ul li a {
+    text-decoration: none;
+    color: var(--gray-light);
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.btn {
+    width: 130px;
+    background-color: var(--blue-dark-button);
+    color: var(--white) !important;
+    display: inline-block;
+    text-align: center;
+    padding: 12px 0;
+    border-radius: 5px;
+    box-shadow: 0 5px 5px rgba(169, 186, 233, 255);
+}
+
+.content-header {
+    width: 100%;
+    height: 600px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content-header .content-text {
+    width: auto;
+    margin: -220px 150px 0 50px;
+}
+
+.content-header .content-text h1 {
+    font-family: var(--title);
+    font-size: 40px;
+    font-weight: 900;
+}
+
+.content-header .content-img>img {
+    background-image: var(--blue-gradient);
+    width: 500px;
+    animation: ease-in animate 1s;
+}
+
+.content-header .content-text .text {
+    margin-top: 15px;
+    font-size: 16px;
+    font-weight: 200px;
+    color: var(--gray-light);
+    margin-bottom: 30px;
+}
+
+.content-header .content-header .icons {
+    margin-top: 10px;
+}
+
+.icons>i {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    font-size: 10px;
+    text-align: center;
+    padding-top: 5px;
+    color: var(--yellow-dark);
+    background-color: var(--yellow-light);
+}
+
+.icons span {
+    color: var(--gray-dark);
+    font-weight: 600;
+}
+
+.vaccine-information {
+    position: absolute;
+    z-index: 9;
+    margin: 400px 0 0 50px;
+}
+
+.vaccine-information>i {
+    width: 20px;
+    height: 20px;
+    font-size: 10px;
+    text-align: center;
+    padding-top: 5px;
+    color: var(--blue-dark-icons);
+    background-color: var(--blue-light-box-icon);
+}
+
+.vaccine-information>h3 {
+    display: inline-block;
+    color: var(--blue-dark-title);
+    margin-bottom: 30px;
+}
+
+.information {
+    background-color: var(--white);
+    border-radius: 5px;
+    width: 600px;
+    height: 90px;
+    opacity: .9;
+    box-shadow: 0 15px 25px rgba(51, 83, 209, .1), 0 5px 10px rgba(51, 83, 209, .1);
+}
+
+.information .container-information {
+    padding: 25px 10px;
+    width: 150px;
+    display: inline-block;
+}
+
+.information .container-information>i {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    font-size: 10px;
+    text-align: center;
+    padding-top: 5px;
+    color: var(--blue-dark-icons);
+    background-color: var(--blue-light-box-icon);
+}
+
+.information .container-information>h3 {
+    font-size: 15px;
+    color: var(--gray-light);
+    display: inline-block;
+}
+
+.information .container-information>p {
+    color: var(--blue-dark-title);
+    font-size: 20px;
+    font-weight: 800;
+    text-align: right;
+}
+
+.btn-information {
+    width: 100px;
+    background-color: var(--blue-dark-button);
+    color: var(--white) !important;
+    display: inline-block;
+    text-align: center;
+    padding: 12px 0;
+    border-radius: 5px;
+    box-shadow: 0 5px 5px rgba(169, 186, 233, 255);
+}
+
+.information>a {
+    text-decoration: none;
+}
+
+
+/*Vaccine brand*/
+
+.vaccine-brand {
+    display: flex;
+    /*flex-wrap: wrap;*/
+    width: 80%;
+    margin: 60PX 120PX 30PX 150PX;
+}
+
+.vaccine-brand img {
+    height: 80px;
+    width: auto;
+    filter: grayscale(100%);
+    opacity: .2;
+}
+
+.vaccine-brand img:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+}
+
+
+/*Benefits*/
+
+.container-benefits {
+    margin-top: 60px;
+}
+
+.container-benefits>h2 {
+    margin-left: 150px;
+    color: var(--blue-dark-title);
+    font-size: 30px;
+    font-family: var(--title);
+}
+
+.container-benefits>p {
+    color: var(--gray-light);
+    width: 40%;
+    margin: 20px 0 60px 150px;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: var(--paragraph);
+    text-align: left;
+}
+
+.container-benefits .cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.container-benefits .card {
+    width: 18%;
+    margin-bottom: 30px;
+    background-color: var(--white);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.16);
+    border-radius: 10px;
+    padding: 45px 30px 60px 30px;
+}
+
+.container-benefits .card:hover {
+    box-shadow: 0 15px 25px rgba(51, 83, 209, .1), 0 5px 10px rgba(51, 83, 209, .1);
+}
+
+.container-benefits .card>i {
+    font-size: 30px;
+    color: var(--blue-dark-icons);
+    background-color: var(--blue-light-box-icon);
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    text-align: center;
+    padding-top: 20px;
+    border-radius: 10%;
+}
+
+.container-benefits .card>h3 {
+    color: var(--blue-dark-title);
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.container-benefits .card>p {
+    font-size: 16px;
+    margin-top: 10px;
+    color: var(--gray-light);
+}
+
+
+/*Preparations*/
+
+.preparations {
+    margin-top: 60px;
+    margin-left: 75px;
+}
+
+.container-preparations {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.container-preparations .content-img {
+    width: 100%;
+}
+
+.container-preparations .content-img>img {
+    margin-top: 160px;
+    width: 100%;
+    height: 500px;
+}
+
+.container-preparations .content-text>h2 {
+    color: var(--blue-dark-title);
+    font-size: 30px;
+    font-family: var(--title);
+}
+
+.container-preparations .content-text>p {
+    color: var(--gray-light);
+    width: 89%;
+    margin: 20px 0 60px 0px;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: var(--paragraph);
+    text-align: left;
+}
+
+.wrap-collabsible {
+    margin: 0 0 30px 100px;
+    width: 75%;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
+}
+
+.wrap-collabsible:hover {
+    box-shadow: 0 15px 25px rgba(51, 83, 209, .1), 0 5px 10px rgba(51, 83, 209, .1);
+}
+
+.wrap-collabsible>i {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    font-size: 10px;
+    text-align: center;
+    padding-top: 5px;
+    margin-left: 20px;
+    color: var(--blue-dark-icons);
+    background-color: var(--blue-light-box-icon);
+}
+
+.collapsible {
+    background-color: var(--white);
+    color: var(--blue-dark-title);
+    cursor: pointer;
+    padding: 18px;
+    width: 80%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+}
+
+.content {
+    padding: 0 18px;
+    width: auto;
+    display: none;
+    overflow: hidden;
+    text-align: justify;
+    background-color: var(--white);
+}
+
+.collapsible:after {
+    font-family: "Font Awesome 5 Free";
+    content: '\f0d8';
+    font-size: 13px;
+    color: white;
+    float: right;
+    margin-left: 5px;
+}
+
+.active:after {
+    font-family: "Font Awesome 5 Free";
+    content: "\f331";
+}
+
+
+/*Emergency contact*/
+
+.emergency {
+    margin-top: 60px;
+}
+
+.emergency .container-emergency {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.emergency .container-emergency .content-text {
+    width: 40%;
+}
+
+.emergency .container-emergency .content-text>h2 {
+    color: var(--blue-dark-title);
+    font-size: 30px;
+    font-family: var(--title);
+    margin-left: 40px;
+}
+
+.emergency .container-emergency .content-text>p {
+    color: var(--gray-light);
+    width: 89%;
+    margin: 20px 0 60px 40px;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: var(--paragraph);
+}
+
+.emergency .container-emergency .content-img>img {
+    margin-top: 100px;
+    width: 590px;
+    height: 550px;
+    justify-content: right;
+}
+
+.emergency .container-emergency .cards {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.emergency .container-emergency .cards .card {
+    width: 40%;
+    background-color: var(--white);
+    border-radius: 10px;
+    margin-bottom: 30px;
+    padding: 40px 35px;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+
+.emergency .container-emergency .cards .card>i {
+    font-size: 30px;
+    color: var(--blue-dark-icons);
+    background-color: var(--blue-light-box-icon);
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    padding-top: 10px;
+    border-radius: 10%;
+}
+
+.emergency .container-emergency .cards .card>h3 {
+    color: var(--blue-dark-title);
+    font-size: 20px;
+    display: inline-block;
+}
+
+.emergency .container-emergency .cards .card>a {
+    display: inline-block;
+    width: 150px;
+    padding: 15px;
+    text-align: center;
+    margin-top: 20px;
+    text-decoration: none;
+    color: var(--blue-dark-button);
+    background-color: var(--blue-light-button);
+}
+
+.emergency .container-emergency .cards .card>a:hover {
+    background-color: var(--blue-dark-button);
+    color: var(--white) !important;
+    display: inline-block;
+    text-align: center;
+    padding: 12px 0;
+    border-radius: 5px;
+    box-shadow: 0 5px 5px rgba(169, 186, 233, 255);
+}
+
+.emergency .container-emergency .cards .card:hover {
+    box-shadow: 0 15px 25px rgba(51, 83, 209, .1), 0 5px 10px rgba(51, 83, 209, .1);
+}
+
+
+/*Footer*/
+
+footer {
+    background-color: var(--purple-light);
+    padding: 50px 0;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: auto;
+}
+
+.partFooter {
+    width: 20%;
+    text-align: center;
+}
+
+.partFooter>h2 {
+    font-family: var(--title);
+    color: var(--blue-dark);
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.partFooter>p {
+    color: var(--gray-light);
+    margin-left: 50px;
+    width: 60%;
+}
+
+.partFooter>h3 {
+    font-family: var(--paragraph);
+    color: var(--blue-dark-title);
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.partFooter>a {
+    font-family: var(--paragraph);
+    font-weight: 600;
+    font-size: 15px;
+    display: block;
+    color: var(--gray-light);
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+.legal {
+    margin: 50px 0 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    color: var(--gray-light);
+}
+
+.legal__links {
+    margin-left: 600px;
+}
+
+.legal__links a {
+    text-decoration: none;
+    color: var(--gray-light);
+    margin-right: 0;
+    padding: 0 10px;
+}
+
+
+/*Animations*/
+
+@keyframes animate {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
